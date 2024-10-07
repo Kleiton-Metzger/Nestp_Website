@@ -1,0 +1,12 @@
+export { default as Home } from "./Home";
+export { default as Culture } from "./Culture";
+export { default as Sport } from "./Sport";
+export { default as Accommodation } from "./Accommodation";
+export { default as Information } from "./Information";
+export { default as Contact } from "./Contact";
+export { default as News } from "./News";
+export { default as AboutUs } from "./AboutUs";
+export { default as IPB } from "./IPB";
+export { default as Agenda } from "./Agenda";
+export { default as ServicosSociais } from "./ServicosSociais";
+export { default as CartaoResid } from "./CartaoResid";

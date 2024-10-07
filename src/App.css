@@ -1,0 +1,23 @@
+/* App.css */
+
+/* Importando Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilo global */
+html, body {
+  height: 100%; /* Garante que o body ocupa 100% da altura da tela */
+  margin: 0; /* Remove margens padrão */
+  background-color: white; /* Cor de fundo branca */
+}
+
+/* Container principal */
+#root {
+  @apply flex flex-col min-h-screen; /* Flexbox vertical e altura mínima de tela cheia */
+}
+
+/* Estilo para o conteúdo principal */
+main {
+  @apply flex-1 pt-16; /* Faz com que o conteúdo ocupe o espaço restante e adiciona padding-top */
+}
