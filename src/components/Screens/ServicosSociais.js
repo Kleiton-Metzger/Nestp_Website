@@ -54,56 +54,65 @@ const servicos = [
 
 const ServicosSociais = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-20">
-      <h1 className="text-3xl font-bold text-center mb-8">
-        Serviços Sociais do Município de Bragança!
-      </h1>
-      <p className="text-lg leading-relaxed mb-5 text-gray-700">
-        O Nucleo de Estudantes Santomemses em Bragança (NESTP) sabe que no
-        inicio de uma nova etapa da vida, como a entrada no ensino superior, é
-        importante conhecer os serviços sociais disponíveis na cidade.
-      </p>
-      <p className="text-lg leading-relaxed mb-8 text-gray-700">
-        Aqui podes encontrar informações sobre a Segurança Social, Finanças,
-        Centro de Saúde e outros serviços que te podem ser úteis.
-      </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {servicos.map((servico) => (
-          <div
-            key={servico.name}
-            className="border rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105"
-          >
-            <img
-              src={servico.image}
-              alt={servico.name}
-              className="w-full h-32 object-cover"
-            />
-            <div className="p-4">
-              <h2 className="text-lg font-semibold">
-                <a href={servico.link} className="hover:text-blue-500">
-                  {servico.name}
-                </a>
-              </h2>
-              <p className="text-gray-600 font-bold">
-                Contacto: {servico.contact}
-              </p>
-              <p className="text-gray-600">Serviços: {servico.services}</p>
-              {servico.sef && (
-                <p className="text-gray-600">SEF: {servico.sef}</p>
-              )}
-              <p>
-                <a
-                  href={servico.locationLink}
-                  className="text-blue-500 hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Ver Localização
-                </a>
-              </p>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 p-4 sm:p-0 sm:bg-white sm:dark:bg-gray-800">
+      <div className="max-w-7xl mx-auto px-4 py-20">
+        <h1 className="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-white">
+          Serviços Sociais do Município de Bragança!
+        </h1>
+        <p className="text-lg leading-relaxed mb-5 text-gray-700 dark:text-gray-300">
+          O Nucleo de Estudantes Santomemses em Bragança (NESTP) sabe que no
+          inicio de uma nova etapa da vida, como a entrada no ensino superior, é
+          importante conhecer os serviços sociais disponíveis na cidade.
+        </p>
+        <p className="text-lg leading-relaxed mb-8 text-gray-700 dark:text-gray-300">
+          Aqui podes encontrar informações sobre a Segurança Social, Finanças,
+          Centro de Saúde e outros serviços que te podem ser úteis.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {servicos.map((servico) => (
+            <div
+              key={servico.name}
+              className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105"
+            >
+              <img
+                src={servico.image}
+                alt={servico.name}
+                className="w-full h-32 object-cover"
+              />
+              <div className="p-4">
+                <h2 className="text-lg font-semibold dark:text-white">
+                  <a
+                    href={servico.link}
+                    className="hover:text-blue-500 dark:hover:text-blue-400"
+                  >
+                    {servico.name}
+                  </a>
+                </h2>
+                <p className="text-gray-600 font-bold dark:text-gray-300">
+                  Contacto: {servico.contact}
+                </p>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Serviços: {servico.services}
+                </p>
+                {servico.sef && (
+                  <p className="text-gray-600 dark:text-gray-400">
+                    SEF: {servico.sef}
+                  </p>
+                )}
+                <p>
+                  <a
+                    href={servico.locationLink}
+                    className="text-blue-500 hover:underline dark:text-blue-400"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ver Localização
+                  </a>
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

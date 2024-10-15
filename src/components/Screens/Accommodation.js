@@ -8,19 +8,19 @@ const Accommodation = () => {
   const [accommodationType, setAccommodationType] = useState("apartamento");
 
   return (
-    <div className="flex flex-col items-center min-h-screen p-4 bg-white">
-      <div className="w-full max-w-3xl bg-white p-8 rounded-lg shadow-2xl border border-gray-300">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 p-4 sm:p-0 sm:bg-white sm:dark:bg-gray-800">
+      <div className="w-full max-w-3xl bg-gray-50 dark:bg-gray-700 p-8 rounded-lg shadow-2xl border border-gray-300 dark:border-gray-600">
         {/* Container para os filtros organizados em 2 colunas */}
         <div className="grid grid-cols-2 gap-6 mb-6">
           {/* Cidade */}
           <div className="flex flex-col">
-            <label className="block mb-1 text-gray-800 font-semibold">
+            <label className="block mb-1 text-gray-800 dark:text-gray-200 font-semibold">
               Cidade
             </label>
             <select
               value={location}
               onChange={(e) => setLocation(e.target.value)}
-              className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+              className="p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200"
             >
               <option value="0">Selecionar Cidade</option>
               <option value="braganca">Bragança</option>
@@ -30,13 +30,13 @@ const Accommodation = () => {
 
           {/* Tipo de Alojamento */}
           <div className="flex flex-col">
-            <label className="block mb-1 text-gray-800 font-semibold">
+            <label className="block mb-1 text-gray-800 dark:text-gray-200 font-semibold">
               Tipo de Alojamento:
             </label>
             <select
               value={accommodationType}
               onChange={(e) => setAccommodationType(e.target.value)}
-              className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+              className="p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200"
             >
               <option value="0">Selecionar Tipo</option>
               <option value="apartamento">Apartamento</option>
@@ -47,7 +47,7 @@ const Accommodation = () => {
 
           {/* Filtro de Preço */}
           <div className="flex flex-col">
-            <label className="block mb-1 text-gray-800 font-semibold">
+            <label className="block mb-1 text-gray-800 dark:text-gray-200 font-semibold">
               Preço:
             </label>
             <div className="flex items-center">
@@ -58,11 +58,15 @@ const Accommodation = () => {
                   value={minPrice}
                   onChange={(e) => setMinPrice(Number(e.target.value))}
                   placeholder="Mínimo"
-                  className="w-full p-2 pl-8 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+                  className="w-full p-2 pl-8 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200"
                 />
-                <span className="absolute left-2 top-2 text-gray-700">€</span>
+                <span className="absolute left-2 top-2 text-gray-700 dark:text-gray-300">
+                  €
+                </span>
               </div>
-              <span className="self-center text-gray-700">-</span>
+              <span className="self-center text-gray-700 dark:text-gray-300">
+                -
+              </span>
               <div className="relative w-full">
                 <input
                   type="number"
@@ -70,22 +74,24 @@ const Accommodation = () => {
                   value={maxPrice}
                   onChange={(e) => setMaxPrice(Number(e.target.value))}
                   placeholder="Máximo"
-                  className="w-full p-2 pl-8 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+                  className="w-full p-2 pl-8 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200"
                 />
-                <span className="absolute left-2 top-2 text-gray-700">€</span>
+                <span className="absolute left-2 top-2 text-gray-700 dark:text-gray-300">
+                  €
+                </span>
               </div>
             </div>
           </div>
 
           {/* Distância da Escola */}
           <div className="flex flex-col">
-            <label className="block mb-1 text-gray-800 font-semibold">
+            <label className="block mb-1 text-gray-800 dark:text-gray-200 font-semibold">
               Distância da Escola:
             </label>
             <select
               value={distanceToSchool}
               onChange={(e) => setDistanceToSchool(e.target.value)}
-              className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+              className="p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200"
             >
               <option value="0">Seleciona a Distância</option>
               <option value="1">0-1 km</option>

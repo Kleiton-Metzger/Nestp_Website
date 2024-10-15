@@ -17,11 +17,19 @@ import {
   ServicosSociais,
   CartaoResid,
 } from "./components/Screens";
+import { DarkModeProvider, useDarkMode } from "./contexts/DarkModeContext";
+import Layout from "./components/Layout";
 
-function App() {
+function AppContent() {
+  const { isDarkMode } = useDarkMode();
+
   return (
-    <Router>
-      <div id="root">
+    <div
+      className={`min-h-screen ${
+        isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"
+      }`}
+    >
+      <Router>
         <Navbar />
         <main>
           <Routes>
@@ -40,8 +48,16 @@ function App() {
           </Routes>
         </main>
         <Footer />
-      </div>
-    </Router>
+      </Router>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <DarkModeProvider>
+      <AppContent />
+    </DarkModeProvider>
   );
 }
 
