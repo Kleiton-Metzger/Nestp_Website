@@ -27,7 +27,7 @@ const servicos = [
   },
   {
     name: "UCSP da Sé",
-    image: "./CS-SE.JPG",
+    image: "./CS-SE.png",
     link: "https://shorturl.at/YywuA",
     contact: "(+351) 273 302 420",
     services: "Consultas de Medicina Geral e requerimento de Número de Utente.",
