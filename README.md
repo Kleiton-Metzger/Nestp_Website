@@ -22,12 +22,5 @@ Desenvolvido com React, o portal fornece informações detalhadas sobre as escol
 2. Instale as dependências com `npm install`
 3. Execute o projeto com `npm start`
 
-## Estrutura do Projeto
-O componente principal `IPB.js` contém:
-- Descrição do IPB
-- Grelha com informações das escolas
-- Grelha com links para plataformas online
-- Seção de serviços centrais
-
 ## Contribuição
 Contribuições são bem-vindas. Por favor, abra uma issue para discutir mudanças importantes antes de criar um pull request.
