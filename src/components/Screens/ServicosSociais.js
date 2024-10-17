@@ -18,7 +18,7 @@ const servicos = [
     locationLink: "https://maps.app.goo.gl/vJjpwTa8K11QeGk89",
   },
   {
-    name: "UCSP Santa Maria 2",
+    name: "Centro de Saúde da UCSP Santa Maria",
     image: "./CS-STM.png",
     link: "https://shorturl.at/ZRfdC",
     contact: "(+351) 273 302 622",
@@ -26,7 +26,7 @@ const servicos = [
     locationLink: "https://maps.app.goo.gl/6j2gMuy9HssmueZF7",
   },
   {
-    name: "UCSP da Sé",
+    name: "Centro de Saúde da UCSP da Sé",
     image: "./CS-SE.png",
     link: "https://shorturl.at/YywuA",
     contact: "(+351) 273 302 420",
@@ -34,11 +34,11 @@ const servicos = [
     locationLink: "https://maps.app.goo.gl/iJ33TB1LfJEUhnYJ6",
   },
   {
-    name: "Município de Bragança",
+    name: "Câmara Municipal de Bragança",
     image: "./MB-CAMARA.png",
     link: "https://www.cm-braganca.pt/pages/87",
     contact: "(+351) 273 304 200",
-    services: "Apoio a Imigrantes e requerimento de Atestados de Residência.",
+    services: "Serviços municipais e outros",
     locationLink: "https://maps.app.goo.gl/CYFYYLj1f5etZXwQ8",
   },
   {
@@ -49,6 +49,14 @@ const servicos = [
     sef: "(+351) 273 300 010",
     services: "Apoio a Imigrantes e requerimento de Autorização de Residência.",
     locationLink: "https://maps.app.goo.gl/x2SPtifPWj3ut5fR8",
+  },
+  {
+    name: "Junta de Freguesia da Sé",
+    image: "./JF-SE.png",
+    link: "https://www.jf-se.pt/",
+    contact: "(+351) 273 329 451",
+    services: "Atestados de residência e outros serviços administrativos.",
+    locationLink: "https://maps.app.goo.gl/M62UxfDjyyA9WV3z8",
   },
 ];
 
