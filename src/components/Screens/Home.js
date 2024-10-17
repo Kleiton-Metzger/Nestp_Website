@@ -13,15 +13,22 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-    }, 5000); // Muda a imagem a cada 5 segundos
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
+  const stats = [
+    { number: 1000, label: "Total de Estudantes", icon: UserGroupIcon },
+    { number: 700, label: "Licenciatura (1º Ciclo)", icon: AcademicCapIcon },
+    { number: 200, label: "Mestrado (2º Ciclo)", icon: AcademicCapIcon },
+    { number: 100, label: "Doutoramento (3º Ciclo)", icon: AcademicCapIcon },
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-32 px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-48 px-4 sm:px-6 lg:px-8 min-h-[calc(100vh-4rem)]">
         <div className="absolute inset-0">
           {images.map((img, index) => (
             <img
@@ -36,18 +43,18 @@ const Home = () => {
           <div className="absolute inset-0 bg-green-700 mix-blend-multiply opacity-60"></div>
         </div>
         <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-6">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white mb-8">
             Núcleo de Estudantes Santomenses em Bragança
           </h1>
-          <p className="text-xl sm:text-2xl text-green-100 mb-10">
+          <p className="text-2xl sm:text-3xl text-green-100 mb-12">
             Unidos pela cultura, fortalecidos pela educação
           </p>
           <Link
             to="/sobre-nos"
-            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-green-700 bg-white hover:bg-green-50 transition duration-300"
+            className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-full text-green-700 bg-white hover:bg-green-50 transition duration-300"
           >
             Saiba Mais
-            <ArrowRightIcon className="ml-2 -mr-1 h-5 w-5" aria-hidden="true" />
+            <ArrowRightIcon className="ml-2 -mr-1 h-6 w-6" aria-hidden="true" />
           </Link>
         </div>
       </section>
@@ -59,31 +66,10 @@ const Home = () => {
             Estudantes Santomenses no IPB
           </h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                number: "1000",
-                label: "Total de Estudantes",
-                icon: UserGroupIcon,
-              },
-              {
-                number: "700",
-                label: "Licenciatura (1º Ciclo)",
-                icon: AcademicCapIcon,
-              },
-              {
-                number: "200",
-                label: "Mestrado (2º Ciclo)",
-                icon: AcademicCapIcon,
-              },
-              {
-                number: "100",
-                label: "Doutoramento (3º Ciclo)",
-                icon: AcademicCapIcon,
-              },
-            ].map((stat) => (
+            {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="bg-green-50 dark:bg-gray-700 rounded-lg p-6 text-center transform hover:scale-105 transition duration-300"
+                className="bg-green-50 dark:bg-gray-700 rounded-lg p-6 text-center transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:bg-green-100 dark:hover:bg-gray-600"
               >
                 <stat.icon className="h-12 w-12 text-green-600 dark:text-green-400 mx-auto mb-4" />
                 <p className="text-4xl font-bold text-green-600 dark:text-green-400">
@@ -111,7 +97,7 @@ const Home = () => {
             {[1, 2, 3].map((i) => (
               <div
                 key={i}
-                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300"
+                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300"
               >
                 <img
                   src={`/piquinapuina.png`}

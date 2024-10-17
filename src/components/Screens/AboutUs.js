@@ -76,7 +76,7 @@ const AboutUs = () => {
 
         <div className="text-center">
           <a
-            href="#contact"
+            href="/contato"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition duration-150 ease-in-out"
           >
             Junte-se a Nós
