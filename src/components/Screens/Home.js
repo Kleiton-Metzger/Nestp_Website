@@ -4,10 +4,12 @@ import {
   ArrowRightIcon,
   UserGroupIcon,
   AcademicCapIcon,
+  ArrowUpIcon,
 } from "@heroicons/react/24/outline";
 
 const Home = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [showScrollTop, setShowScrollTop] = useState(false);
   const images = ["/saotome1.png", "/caogrande.png", "/bandeira.png"];
 
   useEffect(() => {
@@ -15,7 +17,16 @@ const Home = () => {
       setCurrentImage((prevImage) => (prevImage + 1) % images.length);
     }, 5000);
 
-    return () => clearInterval(interval);
+    const handleScroll = () => {
+      setShowScrollTop(window.pageYOffset > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const stats = [
@@ -24,6 +35,13 @@ const Home = () => {
     { number: 200, label: "Mestrado (2º Ciclo)", icon: AcademicCapIcon },
     { number: 100, label: "Doutoramento (3º Ciclo)", icon: AcademicCapIcon },
   ];
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
@@ -141,6 +159,17 @@ const Home = () => {
           </Link>
         </div>
       </section>
+
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 bg-red-600 text-white p-2 rounded-full shadow-lg hover:bg-green-700 transition-colors duration-300"
+          aria-label="Scroll to top"
+        >
+          <ArrowUpIcon className="h-6 w-6" />
+        </button>
+      )}
     </div>
   );
 };
