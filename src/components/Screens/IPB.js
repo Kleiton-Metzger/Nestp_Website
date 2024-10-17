@@ -104,138 +104,147 @@ const servicosCentrais = [
 
 const IPB = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      {/* Descrição do IPB */}
-      <h1 className="text-4xl font-extrabold text-center text-black-600 mb-2">
-        Bem-vindo ao IPB!
-      </h1>
-      <h2 className="text-1xl font-semibold text-center text-gray-500 mb-6">
-        A Terra dos Amigos para Sempre
-      </h2>
-      <p className="text-lg leading-relaxed mb-8 text-gray-700">
-        O Instituto Politécnico de Bragança é uma instituição pública de ensino
-        superior, empenhada na oferta de formação de qualidade e na promoção de
-        atividades de investigação e extensão com impacto no meio económico,
-        social e cultural no Município de Bragança e regiões limítrofes.
-      </p>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 p-4 sm:p-0 sm:bg-white sm:dark:bg-gray-800">
+      <div className="max-w-7xl mx-auto px-4 py-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+        {/* Descrição do IPB */}
+        <h1 className="text-4xl font-extrabold text-center text-black-600 dark:text-white mb-2">
+          Bem-vindo ao IPB!
+        </h1>
+        <h2 className="text-1xl font-semibold text-center text-gray-500 dark:text-gray-400 mb-6">
+          O Politécnico dos Amigos para Sempre
+        </h2>
+        <p className="text-lg leading-relaxed mb-8 text-gray-700 dark:text-gray-300">
+          O Instituto Politécnico de Bragança é uma instituição pública de
+          ensino superior, empenhada na oferta de formação de qualidade e na
+          promoção de atividades de investigação e extensão com impacto no meio
+          económico, social e cultural no Município de Bragança e regiões
+          limítrofes.
+        </p>
 
-      {/* Grelha com as Escolas */}
-      <h2 className="text-3xl font-semibold text-blue-500 mb-4">
-        Escolas do IPB
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
-        {escolas.map((escola) => (
-          <div
-            key={escola.name}
-            className="bg-[#e9ecef] border rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img
-              src={escola.image}
-              alt={escola.name}
-              className="w-full h-32 object-cover mb-4"
-            />
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
-              {escola.name}
-            </h3>
-            <p className="flex items-center text-gray-600 mb-1">
-              <FaMapMarkerAlt className="mr-2 text-red-600" />
+        {/* Grelha com as Escolas */}
+        <h2 className="text-3xl font-semibold text-blue-500 dark:text-blue-400 mb-4">
+          Escolas do IPB
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+          {escolas.map((escola) => (
+            <div
+              key={escola.name}
+              className="bg-gray-50 dark:bg-gray-700 border dark:border-gray-600 rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300"
+            >
+              <img
+                src={escola.image}
+                alt={escola.name}
+                className="w-full h-32 object-cover mb-4"
+              />
+              <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
+                {escola.name}
+              </h3>
+              <p className="flex items-center text-gray-600 dark:text-gray-300 mb-1">
+                <FaMapMarkerAlt className="mr-2 text-red-600 dark:text-red-400" />
+                <a
+                  href={escola.mapsLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 dark:text-blue-400 hover:underline"
+                >
+                  {escola.localizacao}
+                </a>
+              </p>
+              <p className="flex items-center text-gray-600 dark:text-gray-300 mb-1">
+                <FaClock className="mr-2 text-black-600 dark:text-gray-400" />{" "}
+                {escola.horario}
+              </p>
+              <p className="flex items-center text-gray-600 dark:text-gray-300 mb-1">
+                <FaPhone className="mr-2 text-black-600 dark:text-gray-400" />{" "}
+                {escola.telefone}
+              </p>
+              <p className="flex items-center text-gray-600 dark:text-gray-300 mb-4">
+                <FaEnvelope className="mr-2 text-black-600 dark:text-gray-400" />{" "}
+                {escola.email}
+              </p>
               <a
-                href={escola.mapsLink} // Usando o link específico do Google Maps
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:underline"
+                href={escola.link}
+                className="flex items-center text-blue-500 dark:text-blue-400 hover:underline"
               >
-                {escola.localizacao}
+                <FaLink className="mr-2" /> Visite o site
               </a>
-            </p>
-            <p className="flex items-center text-gray-600 mb-1">
-              <FaClock className="mr-2 text-black-600" /> {escola.horario}
-            </p>
-            <p className="flex items-center text-gray-600 mb-1">
-              <FaPhone className="mr-2 text-black-600" /> {escola.telefone}
-            </p>
-            <p className="flex items-center text-gray-600 mb-4">
-              <FaEnvelope className="mr-2 text-black-600" /> {escola.email}
-            </p>
-            <a
-              href={escola.link}
-              className="flex items-center text-blue-500 hover:underline"
-            >
-              <FaLink className="mr-2" /> Visite o site
-            </a>
-          </div>
-        ))}
-      </div>
+            </div>
+          ))}
+        </div>
 
-      {/* Grelha com as Plataformas */}
-      <h2 className="text-3xl font-semibold text-blue-500 mb-4">
-        Plataformas do IPB
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-        {plataformas.map((plataforma) => (
-          <div
-            key={plataforma.name}
-            className="bg-[#e9ecef] border rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300"
-          >
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
-              {plataforma.name}
-            </h3>
-            <a
-              href={plataforma.link}
-              className="flex items-center text-blue-500 hover:underline"
+        {/* Grelha com as Plataformas */}
+        <h2 className="text-3xl font-semibold text-blue-500 dark:text-blue-400 mb-4">
+          Plataformas do IPB
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          {plataformas.map((plataforma) => (
+            <div
+              key={plataforma.name}
+              className="bg-gray-50 dark:bg-gray-700 border dark:border-gray-600 rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300"
             >
-              {plataforma.icon}Visite a plataforma
-            </a>
-          </div>
-        ))}
-      </div>
-
-      {/* Grelha com os Serviços Centrais */}
-      <h2 className="text-3xl font-semibold text-blue-500 mb-4">
-        Serviços Centrais
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
-        {servicosCentrais.map((servico) => (
-          <div
-            key={servico.name}
-            className="bg-[#e9ecef] border rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300"
-          >
-            <img
-              src={servico.image}
-              alt={servico.name}
-              className="w-full h-32 object-cover mb-4"
-            />
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
-              {servico.name}
-            </h3>
-            <p className="flex items-center text-gray-600 mb-1">
-              <FaMapMarkerAlt className="mr-2 text-red-600" />
+              <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
+                {plataforma.name}
+              </h3>
               <a
-                href={servico.mapsLink} // Usando o link específico do Google Maps
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:underline"
+                href={plataforma.link}
+                className="flex items-center text-blue-500 dark:text-blue-400 hover:underline"
               >
-                {servico.localizacao}
+                {plataforma.icon}Visite a plataforma
               </a>
-            </p>
-            <p className="flex items-center text-gray-600 mb-1">
-              <FaClock className="mr-2 text-black-600" /> {servico.horario}
-            </p>
-            <p className="flex items-center text-gray-600 mb-1">
-              <FaPhone className="mr-2 text-black-600" /> {servico.telefone}
-            </p>
-            <p className="flex items-center text-gray-600 mb-4">
-              <FaEnvelope className="mr-2 text-black-600" /> {servico.email}
-            </p>
-            <a
-              href={servico.link}
-              className="flex items-center text-blue-500 hover:underline"
+            </div>
+          ))}
+        </div>
+
+        {/* Grelha com os Serviços Centrais */}
+        <h2 className="text-3xl font-semibold text-blue-500 dark:text-blue-400 mb-4">
+          Serviços Centrais
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+          {servicosCentrais.map((servico) => (
+            <div
+              key={servico.name}
+              className="bg-gray-50 dark:bg-gray-700 border dark:border-gray-600 rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300"
             >
-              <FaLink className="mr-2" /> Visite o site
-            </a>
-          </div>
-        ))}
+              <img
+                src={servico.image}
+                alt={servico.name}
+                className="w-full h-32 object-cover mb-4"
+              />
+              <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
+                {servico.name}
+              </h3>
+              <p className="flex items-center text-gray-600 dark:text-gray-300 mb-1">
+                <FaMapMarkerAlt className="mr-2 text-red-600 dark:text-red-400" />
+                <a
+                  href={servico.mapsLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 dark:text-blue-400 hover:underline"
+                >
+                  {servico.localizacao}
+                </a>
+              </p>
+              <p className="flex items-center text-gray-600 dark:text-gray-300 mb-1">
+                <FaClock className="mr-2 text-black-600 dark:text-gray-400" />{" "}
+                {servico.horario}
+              </p>
+              <p className="flex items-center text-gray-600 dark:text-gray-300 mb-1">
+                <FaPhone className="mr-2 text-black-600 dark:text-gray-400" />{" "}
+                {servico.telefone}
+              </p>
+              <p className="flex items-center text-gray-600 dark:text-gray-300 mb-4">
+                <FaEnvelope className="mr-2 text-black-600 dark:text-gray-400" />{" "}
+                {servico.email}
+              </p>
+              <a
+                href={servico.link}
+                className="flex items-center text-blue-500 dark:text-blue-400 hover:underline"
+              >
+                <FaLink className="mr-2" /> Visite o site
+              </a>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

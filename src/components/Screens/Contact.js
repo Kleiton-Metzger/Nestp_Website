@@ -3,47 +3,51 @@ import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4 sm:p-6 lg:p-8">
-      <div className="bg-[#e9ecef] shadow-lg rounded-lg p-6 sm:p-8 max-w-lg w-full">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-center">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:bg-white sm:dark:bg-gray-800 p-4 sm:p-6 lg:p-8">
+      <div className="bg-white dark:bg-gray-700 shadow-lg rounded-lg p-6 sm:p-8 max-w-lg w-full">
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-center text-gray-800 dark:text-white">
           Contactos NESTP
         </h2>
-        <p className="text-gray-600 mb-4 text-center">
+        <p className="text-gray-600 dark:text-gray-300 mb-4 text-center">
           Estamos aqui para ajudar! Entre em contacto através das informações
           abaixo:
         </p>
         <div className="flex flex-col space-y-4">
           <div className="flex items-center">
-            <FaMapMarkerAlt className="text-red-500 mr-3 text-xl" />
-            <p className="text-gray-700">
+            <FaMapMarkerAlt className="text-red-500 dark:text-red-400 mr-3 text-xl" />
+            <p className="text-gray-700 dark:text-gray-300">
               Centro Académico do IPB, 5300-252 Bragança
             </p>
           </div>
           <div className="flex items-center">
-            <FaPhone className="text-blue-500 mr-3 text-xl" />
-            <p className="text-gray-700">(+351) 273 303 200</p>
+            <FaPhone className="text-blue-500 dark:text-blue-400 mr-3 text-xl" />
+            <p className="text-gray-700 dark:text-gray-300">
+              (+351) 273 303 200
+            </p>
           </div>
           <div className="flex items-center">
-            <FaEnvelope className="text-blue-500 mr-3 text-xl" />
-            <p className="text-gray-700">
+            <FaEnvelope className="text-blue-500 dark:text-blue-400 mr-3 text-xl" />
+            <p className="text-gray-700 dark:text-gray-300">
               <a
                 href="mailto:contato@exemplo.com"
-                className="text-blue-500 hover:underline"
+                className="text-blue-500 dark:text-blue-400 hover:underline"
               >
                 contato@exemplo.com
               </a>
             </p>
           </div>
           <div className="flex items-center">
-            <FaClock className="text-blue-500 mr-3 text-xl" />
-            <p className="text-gray-700">Segunda a Sexta, 9:00 - 17:00</p>
+            <FaClock className="text-blue-500 dark:text-blue-400 mr-3 text-xl" />
+            <p className="text-gray-700 dark:text-gray-300">
+              Segunda a Sexta, 9:00 - 17:00
+            </p>
           </div>
         </div>
       </div>
 
       {/* Seção de Mapa */}
       <div className="mt-8 w-full max-w-2xl">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-center">
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-center text-gray-800 dark:text-white">
           Localização
         </h2>
         <iframe
