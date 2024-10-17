@@ -51,7 +51,7 @@ const servicos = [
     locationLink: "https://maps.app.goo.gl/x2SPtifPWj3ut5fR8",
   },
   {
-    name: "Junta de Freguesia da Sé",
+    name: "Junta da Freguesia da Sé",
     image: "./JF-SE.png",
     link: "https://www.jf-se.pt/",
     contact: "(+351) 273 329 451",
