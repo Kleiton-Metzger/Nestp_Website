@@ -57,8 +57,7 @@ const AboutUs = () => {
                 Excelência Acadêmica
               </h3>
               <p className="text-center text-gray-600 dark:text-gray-300">
-                Incentivamos e apoiamos o sucesso acadêmico de nossos membros,
-                fornecendo recursos e suporte.
+                Incentivamos e apoiamos o sucesso acadêmico de nossos membros.
               </p>
             </div>
             <div className="flex flex-col items-center">
