@@ -126,7 +126,7 @@ const Home = () => {
                     Brevemente descrição da notícia...
                   </p>
                   <Link
-                    to={`/noticias/${i}`}
+                    to={`/noticias`}
                     className="inline-flex items-center text-green-600 dark:text-green-400 hover:underline"
                   >
                     Ler mais
