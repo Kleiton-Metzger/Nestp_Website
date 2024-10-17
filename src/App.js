@@ -1,7 +1,5 @@
 import React from "react";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   Home,
@@ -30,8 +28,7 @@ function AppContent() {
       }`}
     >
       <Router>
-        <Navbar />
-        <main>
+        <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cultura" element={<Culture />} />
@@ -46,8 +43,7 @@ function AppContent() {
             <Route path="/servicos-sociais" element={<ServicosSociais />} />
             <Route path="/cartao-residencia" element={<CartaoResid />} />
           </Routes>
-        </main>
-        <Footer />
+        </Layout>
       </Router>
     </div>
   );
