@@ -53,7 +53,7 @@ const servicos = [
   {
     name: "Junta da Freguesia da Sé",
     image: "./JF-SE.png",
-    link: "https://www.jf-se.pt/",
+    link: "https://www.cm-braganca.pt/municipio/freguesias/poi/uniao-das-freguesias-de-se-santa-maria-e-meixedo",
     contact: "(+351) 273 329 451",
     services: "Atestados de residência e outros serviços administrativos.",
     locationLink: "https://maps.app.goo.gl/M62UxfDjyyA9WV3z8",
