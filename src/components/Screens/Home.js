@@ -62,7 +62,7 @@ const Home = () => {
         </div>
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white mb-8">
-            Núcleo de Estudantes Santomensses em Bragança
+            Núcleo de Estudantes Santomenses em Bragança
           </h1>
           <p className="text-2xl sm:text-3xl text-green-100 mb-12">
             Unidos pela cultura, fortalecidos pela educação
@@ -81,7 +81,7 @@ const Home = () => {
       <section className="py-20 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white text-center mb-12">
-            Estudantes Santomensses no IPB
+            Estudantes Santomenses no IPB
           </h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
