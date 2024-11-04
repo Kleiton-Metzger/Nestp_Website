@@ -30,9 +30,9 @@ const Home = () => {
   }, []);
 
   const stats = [
-    { number: ~100, label: "Total de Estudantes", icon: UserGroupIcon },
-    { number: ~80, label: "Licenciatura (1º Ciclo)", icon: AcademicCapIcon },
-    { number: ~20, label: "Mestrado (2º Ciclo)", icon: AcademicCapIcon },
+    { number: 100, label: "Total de Estudantes", icon: UserGroupIcon },
+    { number: 80, label: "Licenciatura (1º Ciclo)", icon: AcademicCapIcon },
+    { number: 20, label: "Mestrado (2º Ciclo)", icon: AcademicCapIcon },
     { number: 0, label: "Doutoramento (3º Ciclo)", icon: AcademicCapIcon },
   ];
 
@@ -81,7 +81,7 @@ const Home = () => {
       <section className="py-20 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white text-center mb-12">
-            Estudantes Santomenses no IPB
+            Estimativa de Estudantes Santomenses no IPB
           </h2>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
