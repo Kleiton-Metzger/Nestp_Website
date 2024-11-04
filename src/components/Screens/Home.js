@@ -30,9 +30,9 @@ const Home = () => {
   }, []);
 
   const stats = [
-    { number: 100, label: "Total de Estudantes", icon: UserGroupIcon },
-    { number: 80, label: "Licenciatura (1º Ciclo)", icon: AcademicCapIcon },
-    { number: 20, label: "Mestrado (2º Ciclo)", icon: AcademicCapIcon },
+    { number: ~100, label: "Total de Estudantes", icon: UserGroupIcon },
+    { number: ~80, label: "Licenciatura (1º Ciclo)", icon: AcademicCapIcon },
+    { number: ~20, label: "Mestrado (2º Ciclo)", icon: AcademicCapIcon },
     { number: 0, label: "Doutoramento (3º Ciclo)", icon: AcademicCapIcon },
   ];
 

@@ -22,7 +22,7 @@ const Contact = () => {
           <div className="flex items-center">
             <FaPhone className="text-blue-500 dark:text-blue-400 mr-3 text-xl" />
             <p className="text-gray-700 dark:text-gray-300">
-              (+351) 273 303 200
+              (+351) 000 000 000
             </p>
           </div>
           <div className="flex items-center">
