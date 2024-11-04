@@ -100,7 +100,7 @@ const Home = () => {
             ))}
           </div>
           <p className="mt-4 text-center text-gray-500 dark:text-gray-400">
-            Ano Letivo 2023/24
+            Ano Letivo 2024/25
           </p>
         </div>
       </section>
